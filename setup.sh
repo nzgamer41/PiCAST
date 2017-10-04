@@ -23,7 +23,7 @@ sleep 3
 cd /usr/src
 sudo git clone git://git.videolan.org/x264
 cd x264
-sudo ./configure --host=arm-unknown-linux-gnueabi --enable-static --disable-opencl
+sudo ./configure --host=x86_64 --enable-static --disable-opencl
 sudo make
 sudo make install
 
@@ -36,7 +36,7 @@ sleep 2
 cd /usr/src # We could have done cd.. but we're taking NO CHANCES...
 sudo git clone git://source.ffmpeg.org/ffmpeg.git
 cd ffmpeg
-sudo ./configure --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree
+sudo ./configure --arch=x86_64 --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree
 sudo make
 sudo make install
 
